@@ -1,24 +1,10 @@
 {
   "name": "adopt-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Adopt a Pet App",
   "main": "index.js",
-  "scripts": {
-    "format": "prettier --write \"src/**/*.{js, jsx, css, json\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "petfinder-client": "^1.0.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
-  "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -31,7 +17,27 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "parcel-bundler": "^1.12.3",
+    "petfinder-client": "^1.0.2",
     "prettier": "^1.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "sass": "^1.18.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js, jsx, css, json\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjk013/adopt-app.git"
+  },
+  "author": "Jun Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hjk013/adopt-app/issues"
+  },
+  "homepage": "https://github.com/hjk013/adopt-app#readme"
 }

@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
 import Results from "./Results";
 import Detail from "./Details";
+import SearchParams from "./SearchParams";
 
 const App = () => (
   <div>
@@ -12,6 +13,7 @@ const App = () => (
     <Router>
       <Results path="/" />
       <Detail path="/details/:id" />
+      <SearchParams path="/search-params" />
     </Router>
   </div>
 );
