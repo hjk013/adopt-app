@@ -49280,7 +49280,7 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = ResultsWithContext;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -49290,7 +49290,11 @@ var _petfinderClient = _interopRequireDefault(require("petfinder-client"));
 
 require("./style.css");
 
+var _SearchContext = require("./SearchContext");
+
 var _SearchBox = _interopRequireDefault(require("./SearchBox"));
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49390,9 +49394,14 @@ function (_React$Component) {
   return Results;
 }(_react.default.Component);
 
-var _default = Results;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Pet":"Pet.jsx","petfinder-client":"../node_modules/petfinder-client/index.js","./style.css":"style.css","./SearchBox":"SearchBox.js"}],"Carousel.js":[function(require,module,exports) {
+function ResultsWithContext(props) {
+  return _react.default.createElement(_SearchContext.Consumer, null, function (context) {
+    return _react.default.createElement(Results, _extends({}, props, {
+      searchParams: context
+    }));
+  });
+}
+},{"react":"../node_modules/react/index.js","./Pet":"Pet.jsx","petfinder-client":"../node_modules/petfinder-client/index.js","./style.css":"style.css","./SearchContext":"SearchContext.js","./SearchBox":"SearchBox.js"}],"Carousel.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

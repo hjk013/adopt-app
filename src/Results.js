@@ -2,6 +2,7 @@ import React from "react";
 import Pet from "./Pet";
 import pf from "petfinder-client";
 import "./style.css";
+import { Consumer } from "./SearchContext";
 import SearchBox from "./SearchBox";
 
 const petfinder = pf({
@@ -68,4 +69,10 @@ class Results extends React.Component {
   }
 }
 
-export default Results;
+export default function ResultsWithContext(props) {
+  return (
+    <Consumer>
+      {context => <Results {...props} searchParams={context} />}
+    </Consumer>
+  );
+}
